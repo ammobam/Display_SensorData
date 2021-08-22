@@ -76,7 +76,7 @@
 ### 레이블 기준 설정
 - 불량품/양품 나누는 기준
 
----
+
 ## 분류 모델 수행
 - SVM
 - Emsemble Method
@@ -94,3 +94,42 @@
 - 데이터의 구조를 변경해서 사용해야 함
 - XGB Classifier 이용
 - 참고 : https://statkclee.github.io/model/model-python-xgboost-hyper.html
+
+### 평가지표
+- 어떤 평가지표를 사용할지 고민해야 함
+    - 정확도(accuracy) : TN + TP / 전체
+    - 정밀도(precision) : TP / (FP + TP)
+        - Pos로 예측한 것 중 실제 Pos였던 것
+        - 양성예측도
+        - Pos 예측 성능을 더 정밀하게 측정하기 위한 평가지표
+        - FP를 낮추는 데 초점
+    - 재현율(recall) : TP / (FN + TP)
+        - 실제 Pos인 것 중 실제 Pos였던 것
+        - 민감도, TPR(True Positive Rate)
+        - Pos를 Neg로 판단하면 치명적인 경우 사용
+        - FN을 낮추는 데 초점
+    - F1 Score
+        -  2pr/(p+r)
+    - ROC 곡선
+        - 이진분류의 예측 성능 측정에 사용
+        - FP비율 - TP비율(recall) 곡선
+- 이 데이터에서는 극소수의 불량품을 판정하지 못하는 것이 치명적임
+    - 양품은 고객에게 배송되고, 불량품은 재검수 해보는 과정을 생각해보면
+    - 불량품을 양품으로 판정한 경우, 재검수가 이뤄지지 않고 불량품이 고객에게 배송되면 브랜드 이미지에 타격이 가는 등의 치명적인 문제가 발생함
+- 따라서 정확도는 적절치 않음. 재현율(recall)이 적절한 지표
+    - FP가 높고, FN이 낮은지 중점적으로 살펴야 함
+    - F1 Score가 적절할 것 같음
+
+### RFE 클래스를 이용한 중요 피처 선정
+- 참고링크
+    - https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html#sklearn.feature_selection.RFE
+    - https://hongl.tistory.com/116
+- RFE
+    - recursive feature elimination (재귀적 피처 제거)
+    - class sklearn.feature_selection.RFE
+    - RFE(estimator, *, n_features_to_select=None, step=1, verbose=0, importance_getter='auto')
+        - estimator : 훈련할 모델
+        - n_features_to_select : 중요 피처 개수 설정(남길 피처 개수). float으로 설정하면 비율
+        - step : 반복할 때마다 삭제할 피처 개수 설정. float으로 설정하면 비율
+        - importance_getterstr : 삭제 기준. auto로 두면 회귀에서는 .coef, 분류에서는 feature_importance로 정함
+
