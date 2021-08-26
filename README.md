@@ -202,18 +202,18 @@
 	- 단일 알고리즘으로 하나의 모델을 이용하여 분류함
 	- 해당 알고리즘 : SVM, Decision Tree
 - Emsemble 모델 학습 방식
-	(1) Voting
+	- (1) Voting
 	    - **여러 알고리즘**으로 모델을 생성하고 분류 결과를 비교하여 가장 좋은 모델을 선정하는 방법
         - voting 유형
         	- hard voting : voting 결과를 1, 0으로 리턴
 	        - soft voting : voting 결과를 확률로 리턴
 
-	(2) Bagging
+	- (2) Bagging
 	    - **한 가지 알고리즘**으로 여러 개의 모델 생성하여 병렬 학습함
 	    - 각 모델은 데이터 샘플링을 달리하여 비교함
 	    - 해당 알고리즘 : Random Forest
 
-	(3) Boosting
+	- (3) Boosting
 	    - 여러 모델이 **순차적으로 학습함**
 	    - 이전 모델이 잘못 분류한 데이터에 **가중치**를 부여하고 다음 모델 훈련에 적용함
 	    - 해당 알고리즘 : Ada Boost, GBM, XGBoost, LightBoost
