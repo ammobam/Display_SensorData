@@ -129,7 +129,7 @@
 
 
 <details>
-<summary> <span style="color:navy">분류 모델링을 위한 변환 상세내용</span></summary>
+<summary> <span style="color:blue">분류 모델링을 위한 변환 상세내용</span></summary>
 <div markdown="1">   
 
 ### PCA 수행하여 주성분 몇 개가 적절한지 조사
@@ -179,6 +179,7 @@
 <details>
 <summary>평가지표 배경지식</summary>
 <div markdown="1">   
+	
     - 정확도(accuracy) : TN + TP / 전체
     - 정밀도(precision) : TP / (FP + TP)
         - Pos로 예측한 것 중 실제 Pos였던 것
