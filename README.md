@@ -10,7 +10,7 @@
 ### 프로젝트 목표
 - 생산공정 중 양품/불량품에 큰 영향을 미치는 저수율 요인 5개를 찾아내는 것을 목표로 함
 <details>
-<summary> 프로젝트 배경 설명</summary>
+<summary> 📌프로젝트 배경 설명</summary>
 <div markdown="1">       
 
 ### 웨이퍼 식각 공정
@@ -129,7 +129,7 @@
 
 
 <details>
-<summary> <span style="color:blue">분류 모델링을 위한 변환 상세내용</span></summary>
+<summary> ✨분류 모델링을 위한 변환 상세내용</summary>
 <div markdown="1">   
 
 ### PCA 수행하여 주성분 몇 개가 적절한지 조사
@@ -177,9 +177,9 @@
 
 ### 평가지표
 <details>
-<summary>평가지표 배경지식</summary>
+<summary>🔷평가지표 배경지식</summary>
 <div markdown="1">   
-	
+
     - 정확도(accuracy) : TN + TP / 전체
     - 정밀도(precision) : TP / (FP + TP)
         - Pos로 예측한 것 중 실제 Pos였던 것
