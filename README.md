@@ -287,4 +287,4 @@
 
 
 
-<a href="#" class="btn--success"  style="float:right;>🙄 맨 위로 이동하기▲</a>
+<a href="#" class="btn--success" >🙄 맨 위로 이동하기▲</a>
