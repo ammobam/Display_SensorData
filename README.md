@@ -129,7 +129,7 @@
 
 
 <details>
-<summary> 데이터 전처리 상세내용</summary>
+<summary> <span style="color:navy">분류 모델링을 위한 변환 상세내용</span></summary>
 <div markdown="1">   
 
 ### PCA 수행하여 주성분 몇 개가 적절한지 조사
