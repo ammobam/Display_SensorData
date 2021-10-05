@@ -1,5 +1,5 @@
-# 반도체 생산공정 수율 개선 프로젝트
-## - 센서 데이터를 이용한 불량요인 탐색 -
+# Anomaly Detection with Machine Learning
+## - 시계열 센서 데이터를 이용한 불량요인 탐색 -
 
 ## 📁Repository 구조
 ```
