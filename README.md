@@ -235,7 +235,7 @@ Display_SensorData
 - 단일 모델 학습 방식
 	- 단일 알고리즘으로 하나의 모델을 이용하여 분류함
 	- 해당 알고리즘 : SVM, Decision Tree
-- Emsemble 모델 학습 방식
+- Ensemble 모델 학습 방식
 	- (1) Voting
 	    - **여러 알고리즘**으로 모델을 생성하고 분류 결과를 비교하여 가장 좋은 모델을 선정하는 방법
         - voting 유형
@@ -257,16 +257,10 @@ Display_SensorData
 
 ### 2) 이용한 분류 알고리즘
 #### SVM
-- (작성예정)🐥
 
 #### RandomForest
-- (작성예정)🐥
 
 #### Xgboost
-- 파이썬 외부모듈
-- 데이터의 구조를 변경해서 사용해야 함
-- XGB Classifier 이용
-- 참고 : https://statkclee.github.io/model/model-python-xgboost-hyper.html
 
 ### 3) 평가지표 선정
 
