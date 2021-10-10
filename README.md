@@ -8,23 +8,28 @@ Display_SensorData
 |	├── 📁 1. 데이터 탐색 및 전처리
 |	|	├── 📃전처리 수행 완료코드.ipynb
 |	|	├── 📃(1) 컬럼명 구분.ipynb
-|	|	├── 📃(2) 결측치_처리.ipynb
-|	|	└── 📃(3) 분산_0,_상관계수_0_9이상.ipynb
-|	├── 📁 2. 데이터 변환(반복수행)
+|	|	├── 📃(2) 결측치 처리.ipynb
+|	|	└── 📃(3) 분산 0, 상관계수 0.9이상.ipynb
+|	├── 📁 2. 데이터 변환
+|	|	├── 📃(1) PCA 수행 및 레이블 기준 선택.ipynb
+|	|	└── 📃(2) RFE 수행 및 트리구조 확인.ipynb
 |	└── 📁 3. 모델링 수행 및 비교
-├── 📁old_code (시행착오 소스코드)
-└── 📃최종 모델링 완료 코드.ipynb
+|	|	└── 📃분류 모델 수행 및 이상치 탐색.ipynb
+└── 📁old_code (시행착오 소스코드)
 ```
 
 ## 목차
+
+```
   * [분석 환경 및 도구](#분석-환경-및-도구)
   * [프로젝트 개요](#프로젝트-개요)
-    + [프로젝트 목적](#프로젝트-목적)
-    + [프로젝트 목표](#프로젝트-목표)
   * [데이터 탐색](#데이터-탐색)
   * [데이터 전처리](#데이터-전처리)
   * [분류 모델링을 위한 데이터 변환](#분류-모델링을-위한-데이터-변환)
   * [분류 모델 수행](#분류-모델-수행)
+```
+
+
 
 
 ## 💻분석 환경 및 도구
@@ -34,31 +39,48 @@ Display_SensorData
 	- Window (ver 10 / CPU i7 / RAM 16)
 	- Ubuntu (ver 18.04)
 - Language
-	- Python (ver 3.7.11)
+	- Python (ver 3.7)
 - Tools
 	- Github
 	- Google Drive
 	- Slack
 - IDE
 	- Colab
-	- Jupyter Lab (ver 2.2.6)
+	- Jupyter Lab (ver 2.2)
 - Analysis Library
-	- Matplotlib (ver 3.2.2)
-	- Pandas (ver 1.1.5)
-	- Numpy (ver 1.19.5)
-	- Sklearn (ver 0.22.2)
-	- Seaborn (ver 0.11.1)
+	- Pandas (ver 1.1)
+	- Numpy (ver 1.19)
+	- Sklearn (ver 0.22)
+	- Matplotlib (ver 3.2)
+	- Seaborn (ver 0.11)
 ```
 
 
 ## 📌프로젝트 개요
 ### 프로젝트 목적
+
+- 웨이퍼 식각 공정의 센서 데이터 분석을 통해 불량품이 자주 발생하는 하위 공정을 찾아냄
+
+### 프로젝트 목표
+
+- Machine Learning을 이용한 시계열 데이터의 Anomaly Detection
+- 생산공정 중 양품/불량품에 큰 영향을 미치는 저수율 요인을 찾아내는 것을 목표로 함
+
+### 프로젝트 수행내용 요약
+
+- 데이터 : 840 columns * 8145 rows, 시계열 센서 데이터
+- 데이터 탐색(EDA) 및 전처리
+- 평가지표 선정
+- PCA 분석을 통한 이상치 탐지 개수 선정
+- Machine Learning을 이용한 Classification 수행
+- XGBoost, Random Forest, SVM 이용
+- 각 모델의 트리구조를 시각화하고 Gini 계수 탐색을 통한 Anomaly Detection
+- 데이터 시각화를 통한 분석 내용 표현
+
 - 웨이퍼 식각공정 후 테스트 단계에서 센서 측정 데이터를 분석하여 웨이퍼 저수율 요인을 찾고자 함
 - 테스트 과정에서 웨이퍼 상태의 반도체 칩의 불량여부를 선별 가능함
 - 저수율 요인을 찾아 설계상의 문제점이나 제조상의 문제점을 발견해 수정 가능함
 
-### 프로젝트 목표
-- 생산공정 중 양품/불량품에 큰 영향을 미치는 저수율 요인 5개를 찾아내는 것을 목표로 함
 <details>
 <summary> 프로젝트 배경 설명📌(펼치기)</summary>
 <div markdown="1">       
@@ -78,7 +100,9 @@ Display_SensorData
 </details>
 
 
-
+<details>
+<summary> 프로젝트 상세 수행내용📌(펼치기)</summary>
+<div markdown="1">    
 
 ## 📌데이터 탐색
 - 데이터 : 디스플레이 Etching 공정의 센서데이터 (csv 파일)
@@ -296,6 +320,8 @@ Display_SensorData
 </div>
 </details>
 
+</div>
+</details>
 ### 각 모델의 트리구조 확인
 - (작성예정)🐥
 
