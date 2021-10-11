@@ -21,7 +21,7 @@ Display_SensorData
 
 ## 목차
 
-```
+
   * [분석 환경 및 도구](#분석-환경-및-도구)
   * [프로젝트 개요](#프로젝트-개요)
   * [프로젝트 수행내용 요약](# 프로젝트-수행내용-요약)
@@ -30,7 +30,7 @@ Display_SensorData
       * [분류 모델링을 위한 데이터 변환](#분류-모델링을-위한-데이터-변환)
       * [분류 모델 수행](#분류-모델-수행)
   * [프로젝트 결론](#프로젝트-결론)
-```
+
 
 
 
@@ -70,7 +70,7 @@ Display_SensorData
 - 생산공정 중 양품/불량품에 큰 영향을 미치는 저수율 요인을 찾아내는 것을 목표로 함
 
 <details>
-<summary> 프로젝트 배경 설명📌(펼치기)</summary>
+<summary> [프로젝트 배경 설명📌(펼치기)]()</summary>
 <div markdown="1">       
 
 ### 웨이퍼 식각 공정
@@ -106,7 +106,7 @@ Display_SensorData
 
 
 <details>
-<summary> 프로젝트 상세 수행내용📌(펼치기)</summary>
+<summary> [프로젝트 상세 수행내용📌(펼치기)]()</summary>
 <div markdown="1">    
 
 ## 📌데이터 탐색
@@ -126,7 +126,7 @@ Display_SensorData
 
 
 <details>
-<summary> 데이터 전처리 상세내용📌(펼치기)</summary>
+<summary> [데이터 전처리 상세내용📌(펼치기)]()</summary>
 <div markdown="1">   
 
 ### 1)  결측치 처리
@@ -228,7 +228,7 @@ Display_SensorData
     - RFE 클래스를 이용한 중요 피처 선정 
 
 <details>
-<summary> ✨분류 모델링을 위한 데이터 변환 상세내용📌(펼치기)</summary>
+<summary> [분류 모델링을 위한 데이터 변환 상세내용📌(펼치기)]()</summary>
 <div markdown="1">   
 
 ### 1)  PCA 수행
@@ -316,7 +316,7 @@ Display_SensorData
     - FP가 높고, FN이 낮은지 중점적으로 살펴야 함
 
 <details>
-<summary>평가지표 배경지식📌(펼치기)</summary>
+<summary>[평가지표 배경지식📌(펼치기)]()</summary>
 <div markdown="1">   
 
     - 정확도(accuracy) : TN + TP / 전체
