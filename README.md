@@ -354,12 +354,18 @@ Display_SensorData
 
   <img src="img\2108_namu_feature_importance.png" alt="2108_namu_feature_importance" style="zoom:67%;" />
 
-- 해당 피처만으로 Decision Tree를 그려서 트리구조 및 Gini계수 확
-  <img src="img\2108_namu_tree.png" alt="2108_namu_tree" style="zoom: 67%;" />
-  
-- 위의 두 단계를 거쳐 선택한 피처들과 레이블의 관계 시각화
-<img src="img\2108_namu.JPG" style="zoom:67%;" />
 
+- 해당 피처로 Decision Tree를 그려서 트리구조 및 Gini계수 확인
+
+  <img src="img\2108_namu_tree.png" alt="2108_namu_tree" style="zoom: 67%;" />
+
+
+- 위의 두 단계를 거쳐 선택한 피처들과 레이블의 관계 시각화
+
+  <img src="img\2108_namu.JPG" style="zoom:67%;" />
+
+
+### 분석 결과 활용방안
 - 피처 조건에 따른 불량률 판단기준 확립하고 불량품을 검출하는 분류 모델을 수립하여, 불량품에 영향을 주는 피처 5 개 검출함
 
 - 데이터 분석 결과를 생산시스템에 적용하면 다음과 같은 측면에서 현장운영이 수월해질 것으로 기대됨
